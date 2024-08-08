@@ -1,0 +1,26 @@
+overwrite: true
+schema: "https://syn-api-prod.herokuapp.com/graphql"
+documents: src/**/*.graphql
+generates:
+  src/shared/graphql/generated/fragmentTypes.json:
+    plugins:
+      - fragment-matcher
+  src/shared/graphql/generated/types.tsx:
+    plugins:
+      - typescript
+    config:
+      namingConvention:
+        enumValues: change-case-all#upperCase
+  src/:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: shared/graphql/generated/types.tsx
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHOC: false
+      withHooks: true
+      withComponent: false
+      scalars:
+        URL: string

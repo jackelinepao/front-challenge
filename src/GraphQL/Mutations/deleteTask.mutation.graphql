@@ -1,0 +1,30 @@
+mutation DeleteTask($input: DeleteTaskInput!) {
+  deleteTask(input: $input) {
+    createdAt
+    creator {
+      avatar
+      createdAt
+      email
+      fullName
+      id
+      type
+      updatedAt
+    }
+    dueDate
+    id
+    name
+    pointEstimate
+    position
+    status
+    tags
+    assignee {
+      avatar
+      createdAt
+      email
+      fullName
+      id
+      type
+      updatedAt
+    }
+  }
+}
