@@ -12,6 +12,7 @@ export const themeOverride: MantineThemeOverride = {
   fontFamilyMonospace: "Roboto",
   colors: {
     primary: themeColors.primary,
+    secondary: themeColors.secondary,
     dark: themeColors.dark,
     gray: themeColors.gray,
     red: themeColors.red,
@@ -33,7 +34,7 @@ export const themeOverride: MantineThemeOverride = {
       },
       h4: {
         fontSize: rem(18),
-        lineHeight: "1.2",
+        lineHeight: "1.8",
       },
       h5: {
         fontSize: rem(16),
@@ -49,7 +50,7 @@ export const themeOverride: MantineThemeOverride = {
     xxs: rem(10),
     xs: rem(12),
     sm: rem(14),
-    md: rem(16),
+    md: rem(15),
     lg: rem(18),
     xl: rem(20),
   },

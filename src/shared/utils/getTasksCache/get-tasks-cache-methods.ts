@@ -37,8 +37,6 @@ export const deleteTask = (
     variables,
   });
 
-  console.log({ variables });
-
   const tasks = getTasksQuery?.tasks ?? [];
 
   if (tasks && data.id) {
@@ -61,11 +59,13 @@ export const updateTaskList = (
   });
 
   const tasks = getTasksQuery?.tasks ?? [];
+console.log(tasks);
 
   if (tasks) {
     const taskListUpdated = tasks.map((task) =>
       data.id === task.id ? { ...task, ...data } : task
     );
+    console.log({ taskListUpdated });
 
     const taskList: Task[] = [];
 

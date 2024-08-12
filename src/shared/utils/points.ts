@@ -2,23 +2,25 @@ import { PointEstimate } from "../graphql/generated/types";
 
 type PointEstimateType = `${PointEstimate}`;
 
-export const getLabel = (value: PointEstimateType): string => {
+export const getLabelPoints = (value: PointEstimateType) => {
   switch (value) {
     case "ZERO":
-      return "0 Points";
+      return { title: "0 Points" };
     case "ONE":
-      return "1 Point";
+      return { title: "1 Point" };
     case "TWO":
-      return "2 Points";
+      return { title: "2 Points" };
     case "FOUR":
-      return "4 Points";
+      return { title: "4 Points" };
     default:
-      return "8 Points";
+      return { title: "8 Points" };
   }
 };
 
 // Generate the pointArray with labels
 export const pointArray = Object.values(PointEstimate).map((value) => ({
   value,
-  label: getLabel(value as PointEstimateType),
+  label: getLabelPoints(value as PointEstimateType).title,
 }));
+
+console.log({ pointArray }, { PointEstimate });

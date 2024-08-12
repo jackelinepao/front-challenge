@@ -1,5 +1,64 @@
 .card {
+  width: 348px;
   background-color: var(--mantine-color-dark-5);
   padding: 16px;
   border-radius: 8px;
+}
+
+.contCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tagDate {
+  display: flex;
+  gap: 8px;
+  padding: 4px 16px;
+  background: #94979a1a;
+  align-items: center;
+}
+
+.tagDate i {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.yesterday {
+  background: rgba(218, 88, 75, 0.1);
+  color: #da584b;
+}
+
+.tag {
+  background: rgba(148, 151, 154, 0.1);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 4px 16px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.android {
+  background: rgba(229, 180, 84, 0.1);
+  color: #e5b454;
+}
+
+.ios {
+  background: rgba(112, 178, 82, 0.1);
+  color: #70b252;
+}
+
+.node {
+  color: #2f61bf;
+  background: rgba(47, 97, 191, 0.1);
+}
+
+.rails {
+  color: #da584b;
+  background: rgba(218, 88, 75, 0.1);
+}
+
+.buttons span:where([data-position="left"]) {
+  margin-inline-end: 4px;
 }

@@ -1,3 +1,8 @@
 .boardColumn {
-  width: 900px;
+  min-width: 348px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+
+

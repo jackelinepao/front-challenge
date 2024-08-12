@@ -2,23 +2,23 @@ import { TaskTag } from "../graphql/generated/types";
 
 type TaskTagType = `${TaskTag}`;
 
-const getLabel = (value: TaskTagType): string => {
+export const getLabel = (value: TaskTagType) => {
   switch (value) {
     case "ANDROID":
-      return "ANDROID";
+      return { name: "ANDROID", key: "android" };
     case "IOS":
-      return "IOS APP";
+      return { name: "IOS APP", key: "ios" };
     case "NODE_JS":
-      return "NODE JS";
+      return { name: "NODE JS", key: "node" };
     case "RAILS":
-      return "RAILS";
+      return { name: "RAILS", key: "rails" };
     default:
-      return "REACT";
+      return { name: "REACT", key: "react" };
   }
 };
 
 // Generate the pointArray with labels
 export const labelArray = Object.values(TaskTag).map((value) => ({
   value,
-  label: getLabel(value as TaskTagType),
+  label: getLabel(value as TaskTagType).name,
 }));

@@ -6,10 +6,10 @@ export const formatDate = (dateString: string) => {
   const yesterday = dayjs().subtract(1, "day");
 
   if (inputDate.isSame(today, "day")) {
-    return "TODAY";
+    return {text:"TODAY", className: "today"};
   } else if (inputDate.isSame(yesterday, "day")) {
-    return "YESTERDAY";
+    return {text: "YESTERDAY", className: "yesterday" };
   } else {
-    return inputDate.format("D MMMM, YYYY");
+    return {text:inputDate.format("D MMMM, YYYY")};
   }
 };

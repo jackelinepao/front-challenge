@@ -58,7 +58,7 @@ export const ModalCreateTask = ({ opened, close, task }: ModalProp) => {
     mode: "all",
     resolver: FormTaskResolver,
     defaultValues: {
-      status: Status.BACKLOG,
+      status: task?.status ?? Status.BACKLOG,
       name: task?.name ?? "",
       pointEstimate: task?.pointEstimate,
       assigneeId: task?.assignee?.id ?? "",
@@ -84,7 +84,7 @@ export const ModalCreateTask = ({ opened, close, task }: ModalProp) => {
       onCompleted: (result) => {
         createTaskInCache({
           data: result.createTask,
-          variables: { input: { status: Status.BACKLOG } },
+          variables: { input: {} },
         });
       },
     });
@@ -103,7 +103,7 @@ export const ModalCreateTask = ({ opened, close, task }: ModalProp) => {
         onCompleted: (result) => {
           updateTaskListToCache({
             data: result.updateTask,
-            variables: { input: { status: Status.BACKLOG } },
+            variables: { input: {} },
           });
         },
       });

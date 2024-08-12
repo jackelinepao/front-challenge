@@ -36,41 +36,4 @@ const deleteTaskInCache = ({
   deleteTask(data, variables);
 };
 
-/* const updateIngredientInCache = ({
-  data,
-  variables,
-}: {
-  data: IngredientModel
-  variables: GetAllModifiersByRestaurantQueryVariables
-}) => {
-  updateIngredient(data, variables)
-}
-
-const updateIngredientListToCache = ({
-  data,
-  variables,
-}: {
-  data: PaginatedIngredientModel
-  variables: GetAllModifiersByRestaurantQueryVariables
-}) => {
-  updateIngredientList(data, variables)
-}
-
-const deleteIngredientInCache = ({
-  data,
-  variables,
-}: {
-  data: { uuid: string }
-  variables: GetAllModifiersByRestaurantQueryVariables
-}) => {
-  deleteIngredient(data, variables)
-}
-
-export {
-  createIngredientInCache,
-  updateIngredientInCache,
-  updateIngredientListToCache,
-  deleteIngredientInCache,
-} */
-
 export { createTaskInCache, deleteTaskInCache, updateTaskListToCache };
